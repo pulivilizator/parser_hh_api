@@ -57,7 +57,6 @@ async def get_vacancy(params: dict, session: ClientSession) -> dict:
                     for i in resp_json['items']]
         for i in resp_json['items']:
             vacancy_urls.append((i['url'], str(i)))
-        # vacancy_urls = [i['url'] for i in resp_json['items']]
         vacs_tags = await asyncio.gather(*[asyncio.create_task(get_present_tags(url[0], params['text'], url[1], session)) for url in vacancy_urls])
         await asyncio.sleep(6)
         emp_sites = await asyncio.gather(*[asyncio.create_task(get_emp_site(url, session)) for url in emp_urls])
@@ -86,13 +85,6 @@ async def main_vacancies(config: ConfigParser) -> list[tuple]:
     for vac_lst in vacancies_gen:
         if 'items' in vac_lst:
             [vacancies.append((vac['alternate_url'], vac['site_url'], vac['tags'])) for vac in vac_lst['items']]
-    for i in vacancies:
-        print(i)
-        print()
-    # with open('q.json', 'a', encoding='utf-8-sig', newline='') as f:
-    #     for i in vacancies:
-    #         json.dump(i, f, indent=4)
-    print(len(vacancies))
     return vacancies
 
 async def get_vacancies(proxy: dict, params_lists: list[dict]):
