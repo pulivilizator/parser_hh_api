@@ -3,6 +3,6 @@
 
 Парсер собирает информацию о вакансиях с открытого API hh.ru при помощи множества асинхронных запросов, после чего записывает полученные данные в Google Sheets.
 
-Для запуска парсера необходимо зарегистрировать OAuth2 API Google, установить зависимости и настроить систему для работы с ними. (Более подробно про настройку [Google API](https://github.com/pulivilizator/parser_hh_api/blob/main/Инструкция%20Google%20API.pdf))
+Для запуска парсера необходимо зарегистрировать OAuth2 API Google, установить зависимости и настроить систему для работы с ними. (Более подробно про настройку [Google API](https://github.com/pulivilizator/parser_hh_api/blob/main/Инструкция%20Google%20API.pdf) и настройку парсера для работы на [MacOS](https://github.com/pulivilizator/parser_hh_api/blob/main/Настройка%20для%20парсера%20на%20MacOS.pdf))
 
 Парсер разработан для работы на MacOS.
