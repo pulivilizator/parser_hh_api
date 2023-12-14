@@ -47,6 +47,8 @@ async def get_emp_site(url: str, session: ClientSession) -> str | None:
 
 async def get_vacancy(params: dict, session: ClientSession) -> dict:
     await asyncio.sleep(params['page'])
+    if params['page'] == 0:
+        print(f'Обрабатывает запрос {params["text"]}')
     vacancy_urls = []
     async with session.get(url=settings.VACANCIES_API_URL, params=params) as response:
         resp_json = await response.json()

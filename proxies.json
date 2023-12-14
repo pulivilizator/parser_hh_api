@@ -1,20 +1,20 @@
 [
   {
-    "server": "194.32.126.179",
+    "server": "111.11.111.111",
     "port": 17484,
-    "username": "user141851",
-    "password": "t94hsw"
+    "username": "user11111",
+    "password": "123456"
   },
   {
-    "server": "195.69.150.83",
+    "server": "111.11.111.111",
     "port": 17484,
-    "username": "user141851",
-    "password": "t94hsw"
+    "username": "user11111",
+    "password": "123456"
   },
   {
-    "server": "45.11.22.40",
+    "server": "111.11.111.111",
     "port": 17484,
-    "username": "user141851",
-    "password": "t94hsw"
+    "username": "user11111",
+    "password": "123456"
   }
 ]
